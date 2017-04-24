@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0088BA"
+    tools:context=".presentation.items.ItemDetailsActivity">
+
+    <include layout="@layout/toolbar"/>
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   -->     <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:id="@+id/scrollView"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:fadeScrollbars="false"
+    android:scrollbars="vertical"
+            android:scrollbarTrackVertical="@drawable/scroll_bar"
+            android:scrollbarThumbVertical="@drawable/scroll_bar_thumb"
+            android:background="#0088BA"
+
+
+    >
+
+            <LinearLayout
+                android:id="@+id/linearInScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingLeft="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:text="TITLE"
+                    android:textColor="@color/iten_bg"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/title_pharmacologyL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_pharmacology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+
+                        android:text="Фармакология"
+
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pharmacology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/title_testimonyL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/title_testimony"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Показания"
+                        />
+                    <!--<Button
+                        android:id="@+id/btnTestimony"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/testimony"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+
+                    />
+                <RelativeLayout
+                    android:id="@+id/title_contraindicationsL"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_contraindications"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Противопоказания"
+
+                        />
+                    <!--<Button
+                        android:id="@+id/btnContraindications"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>
+    -->            </RelativeLayout>
+                <TextView
+                    android:id="@+id/contraindications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+                    />
+                <RelativeLayout
+                    android:id="@+id/title_dosageL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/title_dosage"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Дозировка"
+
+
+                        />
+                    <!--<Button
+                        android:id="@+id/btnDosage"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/dosage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+
+
+                    />
+                <RelativeLayout
+                    android:id="@+id/title_side_effectL"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_side_effect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Побочное действие"
+
+
+
+                        />
+                    <!--<Button-->
+                    <!--android:id="@+id/btnSide_effect"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:text="+"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/button_bg"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/side_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/title_counterpartsL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_counterparts"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Аналоги"
+
+
+
+                        />
+                    <!--<Button
+                        android:id="@+id/btnCounterparts"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/counterparts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/title_mkb10L"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+                    <TextView
+                        android:id="@+id/title_mkb10"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Применение согласно МКБ10"
+
+
+
+                        />
+                    <!--<Button
+                        android:id="@+id/btnMkb10"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mkb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+
+                    />
+                <RelativeLayout
+                    android:id="@+id/title_additionalL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/iten_bg"
+                    android:onClick="OnClickSpoiler"
+                    >
+                    <TextView
+                        android:id="@+id/title_additional"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="22sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Дополнительная информация"
+
+                        />
+                    <!--<Button
+                        android:id="@+id/btnAdditional"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_alignParentRight="true"
+                        android:onClick="OnClickSpoilerButtons"/>-->
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/additional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/iten_bg"
+                    />
+                <requestFocus />
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+<!--
+    </LinearLayout>
+-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/empty"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

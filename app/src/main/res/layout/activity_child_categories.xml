@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0088BA"
+    tools:context=".presentation.categories.ChildCategoriesActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <!--<RelativeLayout
+        android:paddingTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewS"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:paddingBottom="45dp"
+        android:paddingRight="3dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:fadeScrollbars="false"
+        android:scrollbarTrackVertical="@drawable/scroll_bar"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_thumb"
+        android:background="#0088BA"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:paddingBottom="100dp"
+        android:paddingRight="3dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:fadeScrollbars="false"
+        android:scrollbarTrackVertical="@drawable/scroll_bar"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_thumb"
+        android:background="#0088BA"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <LinearLayout
+            app:layout_anchor="@id/recyclerView"
+            app:layout_anchorGravity="bottom|right|end"
+            android:id="@+id/btnToFav"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:foregroundGravity="top"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_favorite_on"
+                android:foregroundGravity="center"/>
+        </LinearLayout>
+
+   <!-- </RelativeLayout>
+
+-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/empty"/>
+
+    </FrameLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

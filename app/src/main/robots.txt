@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin
+ 
+User-agent: Yandex
+Disallow: /reportazhi/2305176
+Disallow: /raznoe/12434
+Disallow: /raznoe/12150
+
+User-agent: Googlebot
+Disallow: /reportazhi/2305176
